@@ -1,6 +1,5 @@
 name: 'My Malicious Action'
 description: 'This action is for testing CI/CD supply chain attacks.'
-inputs: {}
 runs: 
     using: "docker"
     image: "Dockerfile"
