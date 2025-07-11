@@ -1,3 +1,3 @@
 FROM python:3.11-slim
-COPY malicios.py /malicious.py 
+COPY malicious.py /malicious.py 
 ENTRYPOINT ["python", "/malicious.py"]
