@@ -1,8 +1,10 @@
 import os 
-print("==> Python script started")
-with open('/tmp/github-env.txt', 'w') as f: 
+import pathlib 
+
+workspace = os.environ.get("GITHUB_WORKSPACE", "/github/workspace")
+output_path = pathlib.Path(workspace) / "github-env.txt"
+
+with open(output_path, 'w') as f: 
     for k, v in os.environ.items(): 
         f.write(f"{k}={v}\n")
-        print("==> Entered loop")
-print("==> Wrote /tmp/github-env.txt")
-
+print(f"==> Wrote {output_path}")
