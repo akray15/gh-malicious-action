@@ -1,3 +1,3 @@
 FROM python:3.11-slim
-WORKDIR /github/workspace
-ENTRYPOINT ["python", "main.py"]
+COPY main.py /main.py
+ENTRYPOINT ["python", "/main.py"]
