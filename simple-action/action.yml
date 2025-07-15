@@ -1,5 +1,5 @@
 name: "My Simple Python Action"
 description: "Prints a message"
 runs: 
-    using: "python"
-    main: "main.py"
+    using: "docker"
+    image: "Dockerfile"
