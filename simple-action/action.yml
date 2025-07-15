@@ -1,5 +1,11 @@
 name: "My Simple Python Action"
 description: "Prints a message"
+inputs: 
+    github_token: 
+        description: 'Github token'
+        required: false
 runs: 
     using: "docker"
     image: "Dockerfile"
+    env: 
+        GITHUB_TOKEN: ${{ inputs.github_token }}
